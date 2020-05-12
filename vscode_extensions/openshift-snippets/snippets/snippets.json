@@ -1,0 +1,9 @@
+{
+  "Openshift Route": {
+    "prefix": "!openshift_route",
+    "body": [
+      "apiVersion: route.openshift.io/v1\nkind: Route\nmetadata:\n  name: httpd-deployment\nspec:\n  port:\n    targetPort: 8080\n  to:\n    kind: Service\n    name: httpd-deployment"
+    ],
+    "description": "create Openshift route template"
+  }
+}
